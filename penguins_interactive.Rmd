@@ -1,0 +1,18 @@
+---
+title: "Interactive Penguins"
+author: "Kirsten White"
+date: "10/18/2021"
+output: html_document
+---
+
+```{r setup, include = TRUE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# install.packages("new_package_name") in console
+
+library(plotly)
+library(DT)
+library(tidyverse)
+library(palmerpenguins)
+```
+
