@@ -5,8 +5,10 @@ date: "10/18/2021"
 output: html_document
 ---
 
+# Setup
+
 ```{r setup, include = TRUE, message = FALSE, warning = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 
 # install.packages("new_package_name") in console
 
@@ -14,5 +16,27 @@ library(plotly)
 library(DT)
 library(tidyverse)
 library(palmerpenguins)
+```
+
+# Interactive Plot!
+### Learn to make interactive plot with flipper length vs body mass
+
+```{r}
+penguin_graph <- ggplot(data = penguins, aes(flipper_length_mm, y = body_mass_g))+
+  geom_point(aes(color = species)) # Store ggplot as penguin_graph
+
+penguin_graph
+```
+```{r}
+# Make this ggplot interactive by using plotly
+
+ggplotly(penguin_graph)
+
+```
+
+```{r}
+# Create a data table of a data frame using datatable(dataframe)
+
+datatable(penguins)
 ```
 
